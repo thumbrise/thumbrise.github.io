@@ -182,3 +182,30 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+.deathbook {  
+    text-align: center;  
+    padding: 2rem 1rem;  
+    border-top: 1px solid #e2e2e3;  
+    margin-top: 2rem;  
+}  
+  
+.deathbook h2 {  
+    font-size: 1.4rem;  
+    margin-bottom: 0.5rem;  
+}  
+  
+.deathbook p {  
+    color: #666;  
+    margin-bottom: 1rem;  
+}  
+  
+.deathbook-link {  
+    color: #3451b2;  
+    font-weight: 500;  
+    text-decoration: none;  
+}  
+  
+.deathbook-link:hover {  
+    text-decoration: underline;  
+}
