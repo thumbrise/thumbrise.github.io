@@ -15,8 +15,13 @@
     <link rel="stylesheet" href="/style.css">  
     <script type="module">  
         import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';  
-        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });  
-    </script>  
+        mermaid.initialize({  
+            startOnLoad: true,  
+            theme: 'dark',  
+            flowchart: { nodeSpacing: 60, rankSpacing: 60, curve: 'basis' },  
+            themeVariables: { fontSize: '16px' }  
+        });  
+    </script>
     <style>  
         .deathbook-table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 0.95rem; }  
         .deathbook-table th, .deathbook-table td { border: 1px solid #333; padding: 0.6rem 0.8rem; text-align: left; }  
@@ -29,6 +34,7 @@
         .graph-container { margin: 2rem 0; display: flex; justify-content: center; }  
         .back-link { margin-bottom: 2rem; display: inline-block; color: #7ec8e3; text-decoration: none; }  
         .section-text { color: #aaa; line-height: 1.7; max-width: 720px; margin: 0 auto; }
+        .graph-container .mermaid svg { width: 100%; min-height: 400px; }
     </style>  
 </head>  
 <body>  
