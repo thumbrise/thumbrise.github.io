@@ -50,8 +50,8 @@
     <section>
         <p class="section-text">
             Tools emerge from tools. Problems birth solutions that birth new problems that birth new solutions.
-            autosolve needed retry — resilience was born. resilience needed multi-module releases — multimod was born.
-            multimod needed repo setup — ghset was born. The deathbook gets thicker. The pattern repeats.
+            autosolve needed retry — resilience was born. resilience needed multi-module releases — gover was born.
+            gover needed repo setup — ghset was born. The deathbook gets thicker. The pattern repeats.
         </p>
     </section>
 
@@ -62,7 +62,7 @@
 graph TD
     A["autosolve"] --> B["resilience"]
     A --> G["otelext"]
-    B --> C["multimod"]
+    B --> C["gover"]
     C --> F["ghset"]
 
     style A stroke-width:2px
@@ -103,17 +103,17 @@ graph TD
                     <td>2</td>
                     <td>Multi-module management</td>
                     <td>resilience</td>
-                    <td class="status-extracted">Extracted → thumbrise/multimod</td>
+                    <td class="status-extracted">Extracted → thumbrise/gover</td>
                     <td><code>Discovery → State → Applier</code></td>
                     <td>
-                        <a href="https://thumbrise.github.io/multimod/devlog/">Devlogs</a> ·
-                        <a href="https://thumbrise.github.io/multimod/reference/">RFC</a>
+                        <a href="https://thumbrise.github.io/gover/devlog/">Devlogs</a> ·
+                        <a href="https://thumbrise.github.io/gover/reference/">RFC</a>
                     </td>
                 </tr>
                 <tr>
                     <td>3</td>
                     <td>Declarative repo settings</td>
-                    <td>multimod</td>
+                    <td>gover</td>
                     <td class="status-extracted">Extracted → thumbrise/ghset</td>
                     <td><code>describe → YAML → init</code></td>
                     <td><a href="https://thumbrise.github.io/ghset/">Docs</a></td>
