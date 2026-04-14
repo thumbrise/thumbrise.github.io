@@ -1,197 +1,150 @@
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>The Deathbook — thumbrise</title>  
-    <meta name="description" content="A ledger of ecosystem gaps. Every GAP gets an entry, every entry eventually gets crossed out.">  
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">  
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">  
-    <meta property="og:type" content="website">  
-    <meta property="og:title" content="The Deathbook — thumbrise">  
-    <meta property="og:description" content="A ledger of ecosystem gaps. Every GAP gets an entry, every entry eventually gets crossed out.">  
-    <meta property="og:image" content="https://thumbrise.github.io/og-image.png">  
-    <meta property="og:url" content="https://thumbrise.github.io/deathbook.html">  
-    <link rel="stylesheet" href="/style.css">  
-    <script type="module">  
-        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';  
-        mermaid.initialize({  
-            startOnLoad: true,  
-            theme: 'dark',  
-            flowchart: { nodeSpacing: 60, rankSpacing: 60, curve: 'basis' },  
-            themeVariables: { fontSize: '16px' }  
-        });  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Deathbook — thumbrise</title>
+    <meta name="description" content="A ledger of ecosystem gaps. Every GAP gets an entry, every entry eventually gets crossed out.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Deathbook — thumbrise">
+    <meta property="og:description" content="A ledger of ecosystem gaps. Every GAP gets an entry, every entry eventually gets crossed out.">
+    <meta property="og:image" content="https://thumbrise.github.io/og-image.png">
+    <meta property="og:url" content="https://thumbrise.github.io/deathbook.html">
+    <link rel="stylesheet" href="/style.css">
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'dark',
+            flowchart: { nodeSpacing: 60, rankSpacing: 60, curve: 'basis' },
+            themeVariables: { fontSize: '16px' }
+        });
     </script>
-    <style>  
-        .deathbook-table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 0.95rem; }  
-        .deathbook-table th, .deathbook-table td { border: 1px solid #333; padding: 0.6rem 0.8rem; text-align: left; }  
-        .deathbook-table th { background: #1a1a1a; }  
-        .deathbook-table tr:nth-child(even) { background: #111; }  
-        .deathbook-table a { color: #7ec8e3; }  
-        .status-extracted { color: #4caf50; }  
-        .status-documented { color: #ff9800; }  
-        .status-planned { color: #9e9e9e; }  
-        .graph-container { margin: 2rem 0; display: flex; justify-content: center; }  
-        .back-link { margin-bottom: 2rem; display: inline-block; color: #7ec8e3; text-decoration: none; }  
+    <style>
+        .deathbook-table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 0.95rem; }
+        .deathbook-table th, .deathbook-table td { border: 1px solid #333; padding: 0.6rem 0.8rem; text-align: left; }
+        .deathbook-table th { background: #1a1a1a; }
+        .deathbook-table tr:nth-child(even) { background: #111; }
+        .deathbook-table a { color: #7ec8e3; }
+        .status-extracted { color: #4caf50; }
+        .status-documented { color: #ff9800; }
+        .status-planned { color: #9e9e9e; }
+        .graph-container { margin: 2rem 0; display: flex; justify-content: center; }
+        .back-link { margin-bottom: 2rem; display: inline-block; color: #7ec8e3; text-decoration: none; }
         .section-text { color: #aaa; line-height: 1.7; max-width: 720px; margin: 0 auto; }
         .graph-container .mermaid svg { width: 100%; min-height: 400px; }
-    </style>  
-</head>  
-<body>  
-<main>  
-    <a href="/" class="back-link">← thumbrise</a>  
-  
-    <section class="hero">  
-        <h1>The Deathbook</h1>  
-        <p class="tagline">A ledger of ecosystem gaps</p>  
-        <p class="subtitle">Every GAP gets an entry. Every entry eventually gets crossed out.</p>  
-    </section>  
-  
-    <section>  
-        <p class="section-text">  
-            Tools emerge from tools. Problems birth solutions that birth new problems that birth new solutions.  
-            autosolve needed retry — resilience was born. resilience needed multi-module releases — multimod was born.  
-            multimod needed repo setup — ghset was born. The deathbook gets thicker. The pattern repeats.  
-        </p>  
-    </section>  
-  
-    <section>  
-        <h2>The Tree</h2>  
-        <div class="graph-container">  
-            <pre class="mermaid">  
-graph TD  
-    A["autosolve"] --> B["resilience"]  
-    A --> G["otelext"]  
-    B --> C["multimod"]  
-    B --> H["event system redesign"]  
-    B --> I["fallback sub-package"]  
-    B --> J["lifecycle hooks"]  
-    C --> D["version-bumper"]  
-    C --> E["ghreleaser"]  
-    C --> F["ghset"]  
-  
-    style A stroke-width:2px  
-    style B stroke-width:2px  
-    style C stroke-width:2px  
-    style F stroke-width:2px  
-    style G stroke-width:2px  
-            </pre>  
-        </div>  
-    </section>  
-  
-    <section>  
-        <h2>The Ledger</h2>  
-        <table class="deathbook-table">  
-            <thead>  
-                <tr>  
-                    <th>#</th>  
-                    <th>GAP</th>  
-                    <th>Born inside</th>  
-                    <th>Status</th>  
-                    <th>Primitive</th>  
-                    <th>Artifacts</th>  
-                </tr>  
-            </thead>  
-            <tbody>  
-                <tr>  
-                    <td>1</td>  
-                    <td>Resilience patterns in Go</td>  
-                    <td>autosolve</td>  
-                    <td class="status-extracted">Extracted → thumbrise/resilience</td>  
-                    <td><code>func(ctx, call) error</code></td>  
-                    <td>  
-                        <a href="https://thumbrise.github.io/resilience/devlog/001-package-extracting">Devlog #1</a> ·  
-                        <a href="https://thumbrise.github.io/autosolve/devlog/012-resilience-do-vision">Do Primitive</a> ·  
-                        <a href="https://thumbrise.github.io/resilience/references/rfc-002-resilience-stress-debate">RFC-002</a>  
-                    </td>  
-                </tr>  
-                <tr>  
-                    <td>2</td>  
-                    <td>Task runner lifecycle hooks</td>  
-                    <td>resilience</td>  
-                    <td class="status-documented">Documented, waiting</td>  
-                    <td><code>BeforeAll</code> / phases</td>  
-                    <td>—</td>  
-                </tr>  
-                <tr>  
-                    <td>3</td>  
-                    <td>Multi-module management</td>  
-                    <td>resilience</td>  
-                    <td class="status-extracted">Extracted → thumbrise/multimod</td>  
-                    <td><code>Discovery → State → Applier</code></td>  
-                    <td>  
-                        <a href="https://thumbrise.github.io/resilience/devlog/003-multimod-gap">Devlog #3</a> ·  
-                        <a href="https://thumbrise.github.io/multimod/devlog/001-the-great-migration">Migration</a> ·  
-                        <a href="https://thumbrise.github.io/multimod/reference/rfc-001-ecosystem">RFC-001</a>  
-                    </td>  
-                </tr>  
-                <tr>  
-                    <td>4</td>  
-                    <td>Version bumping from commits</td>  
-                    <td>multimod</td>  
-                    <td class="status-planned">Planned</td>  
-                    <td><code>version-bumper</code></td>  
-                    <td><a href="https://thumbrise.github.io/multimod/reference/rfc-001-ecosystem">RFC-001 §4</a></td>  
-                </tr>  
-                <tr>  
-                    <td>5</td>  
-                    <td>GitHub Release creation</td>  
-                    <td>multimod</td>  
-                    <td class="status-planned">Planned</td>  
-                    <td><code>ghreleaser</code></td>  
-                    <td><a href="https://thumbrise.github.io/multimod/reference/rfc-001-ecosystem">RFC-001 §4</a></td>  
-                </tr>  
-                <tr>  
-                    <td>6</td>  
-                    <td>Declarative repo settings</td>  
-                    <td>multimod</td>  
-                    <td class="status-extracted">Extracted → thumbrise/ghset</td>  
-                    <td><code>describe → YAML → init</code></td>  
-                    <td><a href="https://thumbrise.github.io/ghset/">Docs</a></td>  
-                </tr>  
-                <tr>  
-                    <td>7</td>  
-                    <td>Reusable OTEL extensions</td>  
-                    <td>autosolve</td>  
-                    <td class="status-extracted">Extracted → thumbrise/otelext</td>  
-                    <td>SDK helpers</td>  
-                    <td><a href="https://github.com/thumbrise/otelext">README</a></td>  
-                </tr>  
-                <tr>  
-                    <td>8</td>  
-                    <td>Generic event system</td>  
-                    <td>resilience</td>  
-                    <td class="status-planned">RFC written, not implemented</td>  
-                    <td><code>Emit(ctx, any)</code> + <code>Listener</code></td>  
-                    <td><a href="https://thumbrise.github.io/resilience/references/rfc-002-resilience-stress-debate">RFC-002 §Phase 2</a></td>  
-                </tr>  
-                <tr>  
-                    <td>9</td>  
-                    <td>Fallback sub-package</td>  
-                    <td>resilience</td>  
-                    <td class="status-planned">RFC written, not implemented</td>  
-                    <td><code>fallback.To(fn)</code></td>  
-                    <td><a href="https://thumbrise.github.io/resilience/references/rfc-002-resilience-stress-debate">RFC-002 §Phase 1</a></td>  
-                </tr>  
-            </tbody>  
-        </table>  
-    </section>  
-  
-    <section>  
-        <p class="section-text">  
-            Each entry follows the same script: concrete pain → honest research → minimal primitive → extract when ready.  
-            The bold entries have shipped code. The rest have RFCs or documented plans. Nothing is hand-waved.  
-        </p>  
-    </section>  
-  
-    <footer>  
-        <div class="footer-links">  
-            <a href="https://github.com/thumbrise">GitHub</a>  
-            <span class="sep">·</span>  
-            <a href="https://www.linkedin.com/in/ruslan-kokoev/">LinkedIn</a>  
-        </div>  
-        <p class="copyright">Apache 2.0 · thumbrise</p>  
-    </footer>  
-</main>  
-</body>  
+    </style>
+</head>
+<body>
+<main>
+    <a href="/" class="back-link">← thumbrise</a>
+
+    <section class="hero">
+        <h1>The Deathbook</h1>
+        <p class="tagline">A ledger of ecosystem gaps</p>
+        <p class="subtitle">Every GAP gets an entry. Every entry eventually gets crossed out.</p>
+    </section>
+
+    <section>
+        <p class="section-text">
+            Tools emerge from tools. Problems birth solutions that birth new problems that birth new solutions.
+            autosolve needed retry — resilience was born. resilience needed multi-module releases — multimod was born.
+            multimod needed repo setup — ghset was born. The deathbook gets thicker. The pattern repeats.
+        </p>
+    </section>
+
+    <section>
+        <h2>The Tree</h2>
+        <div class="graph-container">
+            <pre class="mermaid">
+graph TD
+    A["autosolve"] --> B["resilience"]
+    A --> G["otelext"]
+    B --> C["multimod"]
+    C --> F["ghset"]
+
+    style A stroke-width:2px
+    style B stroke-width:2px
+    style C stroke-width:2px
+    style F stroke-width:2px
+    style G stroke-width:2px
+            </pre>
+        </div>
+    </section>
+
+    <section>
+        <h2>The Ledger</h2>
+        <table class="deathbook-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>GAP</th>
+                    <th>Born inside</th>
+                    <th>Status</th>
+                    <th>Primitive</th>
+                    <th>Artifacts</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Resilience patterns in Go</td>
+                    <td>autosolve</td>
+                    <td class="status-extracted">Extracted → thumbrise/resilience</td>
+                    <td><code>func(ctx, call) error</code></td>
+                    <td>
+                        <a href="https://thumbrise.github.io/resilience/devlog/">Devlogs</a> ·
+                        <a href="https://thumbrise.github.io/resilience/references/">RFC</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Multi-module management</td>
+                    <td>resilience</td>
+                    <td class="status-extracted">Extracted → thumbrise/multimod</td>
+                    <td><code>Discovery → State → Applier</code></td>
+                    <td>
+                        <a href="https://thumbrise.github.io/multimod/devlog/">Devlogs</a> ·
+                        <a href="https://thumbrise.github.io/multimod/reference/">RFC</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Declarative repo settings</td>
+                    <td>multimod</td>
+                    <td class="status-extracted">Extracted → thumbrise/ghset</td>
+                    <td><code>describe → YAML → init</code></td>
+                    <td><a href="https://thumbrise.github.io/ghset/">Docs</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Reusable OTEL extensions</td>
+                    <td>autosolve</td>
+                    <td class="status-extracted">Extracted → thumbrise/otelext</td>
+                    <td>SDK helpers</td>
+                    <td><a href="https://github.com/thumbrise/otelext">README</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <p class="section-text">
+            Each entry follows the same script: concrete pain → honest research → minimal primitive → extract when ready.
+            Every entry has shipped code. Nothing is hand-waved.
+        </p>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://github.com/thumbrise">GitHub</a>
+            <span class="sep">·</span>
+            <a href="https://www.linkedin.com/in/ruslan-kokoev/">LinkedIn</a>
+        </div>
+        <p class="copyright">Apache 2.0 · thumbrise</p>
+    </footer>
+</main>
+</body>
 </html>
