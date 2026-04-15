@@ -183,29 +183,33 @@ footer {
     }
 }
 
-.deathbook {  
-    text-align: center;  
-    padding: 2rem 1rem;  
-    border-top: 1px solid #e2e2e3;  
-    margin-top: 2rem;  
-}  
-  
-.deathbook h2 {  
-    font-size: 1.4rem;  
-    margin-bottom: 0.5rem;  
-}  
-  
-.deathbook p {  
-    color: #666;  
-    margin-bottom: 1rem;  
-}  
-  
-.deathbook-link {  
-    color: #3451b2;  
-    font-weight: 500;  
-    text-decoration: none;  
-}  
-  
-.deathbook-link:hover {  
-    text-decoration: underline;  
+.section {
+    text-align: center;
+    padding: 48px 0;
+    border-top: 1px solid var(--border);
+}
+.section h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.section p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.section .footer-links {
+    margin-top: 16px;
+}
+.section-link {
+    color: var(--accent);
+    font-weight: 500;
+    text-decoration: none;
+}
+.section-link:hover {
+    text-decoration: underline;
 }
