@@ -15,4 +15,7 @@
     <sitemap>
         <loc>https://thumbrise.github.io/gover/sitemap.xml</loc>
     </sitemap>
+    <sitemap>
+        <loc>https://thumbrise.github.io/op/sitemap.xml</loc>
+    </sitemap>
 </sitemapindex>
