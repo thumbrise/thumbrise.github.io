@@ -60,17 +60,14 @@
         <div class="graph-container">
             <pre class="mermaid">
 graph TD
-    A["autosolve"] --> B["resilience"]
-    A --> G["otelext"]
+    H["autosolve"] --> B["resilience"]
+    H["autosolve"] --> I["op"]
     B --> C["gover"]
     C --> F["ghset"]
-    H["private"] --> I["op"]
 
-    style A stroke-width:2px
     style B stroke-width:2px
     style C stroke-width:2px
     style F stroke-width:2px
-    style G stroke-width:2px
     style H stroke-width:2px
     style I stroke-width:2px
             </pre>
@@ -128,14 +125,6 @@ graph TD
                     <td class="status-extracted">Extracted → thumbrise/ghset</td>
                     <td><code>describe → YAML → init</code></td>
                     <td><a href="https://thumbrise.github.io/ghset/">Docs</a></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Reusable OTEL extensions</td>
-                    <td>autosolve</td>
-                    <td class="status-extracted">Extracted → thumbrise/otelext</td>
-                    <td>SDK helpers</td>
-                    <td><a href="https://github.com/thumbrise/otelext">README</a></td>
                 </tr>
             </tbody>
         </table>
